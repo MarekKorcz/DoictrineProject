@@ -1,0 +1,8 @@
+{% if bookToShow is not null %}
+    Książka o id: {{ bookToShow.id }}<br>
+    Tytuł: {{ bookToShow.title }}<br>
+    Opis: {{ bookToShow.description }}<br>
+    Raiting: {{ bookToShow.raiting }}<br>
+{% else %}
+    Nie ma ksiązki o podanym id...
+{% endif %}

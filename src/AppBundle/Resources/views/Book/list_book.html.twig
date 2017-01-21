@@ -1,0 +1,22 @@
+{% extends "::base.html.twig" %}
+
+{% block title %} Lista wszystkich ksiązek {% endblock %}
+
+{% block body %}
+    <ul>
+        {% for book in allBooks %}
+            {#<li> {% include "AppBundle:Book:_book.html.twig"
+                             with {"bookToShow" : book} %} </li>#}
+            <li> 
+                {{ book.id }} - {{ book.title }} 
+                <a href="{{ path('app_book_deletebook', 
+                                {'id': book.id}) }}">
+                    Delete
+                </a>
+            </li>
+        {% else %}
+            <li> Nie mamy książek w systemie... </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+

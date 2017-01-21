@@ -1,0 +1,12 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}New Book Form{% endblock %}
+
+{% block body %}
+    <form action="/createBook" method="POST">
+        Title: <input type="text" name="title"><br>
+        Description: <input type="text" name="description"><br>
+        Raiting: <input type="number" name="raiting"><br>
+        <input type="submit">
+    </form>
+{% endblock %}
